@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #aaaaaa, #646464);
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: whitesmoke;
+}
+form button {
+  color: #467c00;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+form button:hover {
+  background: #000000;
+  color: whitesmoke;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  display: flex;
+  margin: 0.5rem;
+  background: whitesmoke;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.todo li {
+  flex: 1;
+}
+.complete-btn,
+.trash-btn {
+  background: #ffa033;
+  color: whitesmoke;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: green;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-style: italic;
+}
+.fall {
+  transform: translateX(10rem);
+  opacity: 0;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: small;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #ffa033;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.select:hover::after {
+  background: white;
+  color: #ffa033;
+}
